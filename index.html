@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Халява</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    font-family: Arial;
+    color: white;
+    flex-direction: column;
+}
+
+button {
+    font-size: 30px;
+    padding: 25px 60px;
+    border: none;
+    border-radius: 15px;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+#text {
+    margin-top: 30px;
+    font-size: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎁 ХАЛЯВА</h1>
+
+<button onclick="showText()">ХАЛЯВА</button>
+
+<div id="text"></div>
+
+<script>
+function showText() {
+    document.getElementById("text").innerText = "Напиши @lastlexore";
+}
+</script>
+
+</body>
+</html>
