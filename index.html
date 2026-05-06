@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Магазин</title>
+    <style>
+        body { background: #111; color: white; font-family: Arial; }
+        .card { border: 1px solid #444; padding: 10px; margin: 10px; }
+        img { max-width: 200px; }
+    </style>
+</head>
+<body>
+
+<h1>🔥 Магазин аккаунтов</h1>
+<div id="shop"></div>
+
+<script>
+async function load() {
+    let res = await fetch("/products");
+    let data = await res.json();
+
+    let div = document.getElementById("shop");
+
+    data.forEach(p => {
+        div.innerHTML += `
+        <div class="card">
+            <h3>${p.name}</h3>
+            <p>${p.desc}</p>
+            <b>${p.price} ₽</b><br>
+            <img src="${p.photo}">
+        </div>
+        `;
+    });
+}
+load();
+</script>
+
+</body>
+</html>
